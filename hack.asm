@@ -70,7 +70,9 @@ display_punchingmitts_qualify_value:
         ; replace original instruction
         call    $0292
 
+        push    af
         ld      a, PUNCHINGMITTS_QUALIFY
         ld      de, $7d30
         call    $0521
+        pop     af
         ret
